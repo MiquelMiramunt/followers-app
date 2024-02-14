@@ -1,7 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from "@angular/common/http";
 
 @Injectable()
 export class GithubFollowersService {
@@ -9,7 +9,7 @@ export class GithubFollowersService {
 
   constructor(private http: HttpClient) {  }
 
-  getFollowers() { 
+  getFollowers() {
     return this.http.get(this._url).pipe(
       map(response => response));
   }
